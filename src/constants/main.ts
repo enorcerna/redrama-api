@@ -1,1 +1,1 @@
-export const PORT = Deno.env.get("DEV") === "True" ? 9011 : 3000;
+export const PORT = Deno.env.get("MODE_DEV") === "True" ? 9011 : 3000;
