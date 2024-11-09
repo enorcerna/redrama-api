@@ -9,7 +9,7 @@
     "@/controllers/": "./src/controllers/"
   },
   "tasks": {
-    "dev": "deno run -A --watch ./src/main.ts",
+    "dev": "deno run  -A --watch --env-file ./src/main.ts",
     "start": "deno run --allow-net main.ts"
   },
   "compilerOptions": {
