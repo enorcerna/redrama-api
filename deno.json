@@ -1,7 +1,10 @@
 {
   "imports": {
     "hono": "jsr:@hono/hono@^4.6.9",
+    "@graphql": "https://deno.land/x/graphql_request@v4.1.0/mod.ts",
+    "@graphql/types": "https://deno.land/x/graphql_request@v4.1.0/src/types.ts",
     "@/types/": "./src/types/",
+    "@/gql/": "./src/gql/",
     "@/services/": "./src/services/",
     "@/utils/": "./src/utils/",
     "@/constants/": "./src/constants/",
