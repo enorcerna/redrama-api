@@ -7,6 +7,7 @@ import labels from "@/routes/v1/label/index.ts";
 import countries from "@/routes/v1/country/index.ts";
 import search from "@/routes/v1/search/index.ts";
 import home from "@/routes/v1/home/index.ts";
+import drama from "@/routes/v1/drama/index.ts";
 const app = new Hono();
 // middleware
 app.use(logger(), cors());
@@ -16,5 +17,6 @@ app.route("", labels);
 app.route("", countries);
 app.route("", search);
 app.route("", home);
+app.route("", drama);
 
 Deno.serve({port: PORT}, app.fetch);
