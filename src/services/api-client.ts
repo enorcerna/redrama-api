@@ -1,6 +1,8 @@
 import {RequestDocument, Variables} from "@graphql/types";
 import {GraphQLClient} from "@graphql";
 import {labelQuery, countryQuery} from "@/gql/index.ts";
+import {searchQuery} from "@/gql/searchQuery.ts";
+import {lastListDramaQuery} from "@/gql/LastListDramaQuery.ts";
 class Api {
   private api_url: string;
   private client: GraphQLClient;
@@ -21,6 +23,16 @@ class Api {
   }
   async getCountries() {
     return await this.Request(countryQuery, {platform: "doramasgo"});
+  }
+  async getSearch(q: string) {
+    return await this.Request(searchQuery, {input: q});
+  }
+  //last
+  async getLastListDrama() {
+    return await this.Request(lastListDramaQuery, {
+      limit: 15,
+      filter: {isTVShow: false}
+    });
   }
 }
 export const ApiClient = new Api();
