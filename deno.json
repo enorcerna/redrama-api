@@ -1,5 +1,6 @@
 {
   "imports": {
+    "@zaubrik/djwt": "jsr:@zaubrik/djwt@^3.0.2",
     "hono": "jsr:@hono/hono@^4.6.9",
     "@graphql": "https://deno.land/x/graphql_request@v4.1.0/mod.ts",
     "@graphql/types": "https://deno.land/x/graphql_request@v4.1.0/src/types.ts",
@@ -18,5 +19,13 @@
   "compilerOptions": {
     "jsx": "precompile",
     "jsxImportSource": "hono/jsx"
+  },
+  "deploy": {
+    "project": "c09e3e25-a38c-4c4f-a017-89dbb25412b7",
+    "exclude": [
+      "**/node_modules"
+    ],
+    "include": [],
+    "entrypoint": "src\\main.ts"
   }
 }
