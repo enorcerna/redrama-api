@@ -1,1 +1,2 @@
-export * from "@/gql/labelQuery.ts";
+export * from "./countryQuery.ts";
+export * from "./labelQuery.ts";
