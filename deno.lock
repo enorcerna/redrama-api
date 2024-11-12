@@ -1,11 +1,22 @@
 {
   "version": "4",
   "specifiers": {
-    "jsr:@hono/hono@^4.6.9": "4.6.9"
+    "jsr:@hono/hono@^4.6.9": "4.6.9",
+    "jsr:@std/encoding@0.224.0": "0.224.0",
+    "jsr:@zaubrik/djwt@^3.0.2": "3.0.2"
   },
   "jsr": {
     "@hono/hono@4.6.9": {
       "integrity": "4d4975f5c023d4416d26e6dd4a498c56e59958561733f56f55a9be57f023603b"
+    },
+    "@std/encoding@0.224.0": {
+      "integrity": "efb6dca97d3e9c31392bd5c8cfd9f9fc9decf5a1f4d1f78af7900a493bcf89b5"
+    },
+    "@zaubrik/djwt@3.0.2": {
+      "integrity": "8070adaa49cd9e5d2b8ae82fd461132c966ef2f8ff8378db4a4da8df4f17c664",
+      "dependencies": [
+        "jsr:@std/encoding"
+      ]
     }
   },
   "redirects": {
@@ -152,7 +163,8 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@hono/hono@^4.6.9"
+      "jsr:@hono/hono@^4.6.9",
+      "jsr:@zaubrik/djwt@^3.0.2"
     ]
   }
 }
