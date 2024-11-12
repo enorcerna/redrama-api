@@ -9,6 +9,7 @@ import search from "@/routes/v1/search/index.ts";
 import home from "@/routes/v1/home/index.ts";
 import drama from "@/routes/v1/drama/index.ts";
 import episode from "@/routes/v1/episode/index.ts";
+import genre from "@/routes/v1/genre/index.ts";
 const app = new Hono();
 // middleware
 app.use(logger(), cors());
@@ -20,5 +21,6 @@ app.route("", search);
 app.route("", home);
 app.route("", drama);
 app.route("", episode);
+app.route("", genre);
 
 Deno.serve({port: PORT}, app.fetch);
