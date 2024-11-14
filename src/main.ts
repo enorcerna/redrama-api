@@ -12,7 +12,7 @@ import episode from "@/routes/v1/episode/index.ts";
 import genre from "@/routes/v1/genre/index.ts";
 const app = new Hono();
 // middleware
-app.use(logger(), cors({origin: "*"}));
+app.use("*", logger(), cors({origin: "*"}));
 //routes
 app.route("", v1);
 app.route("", labels);
